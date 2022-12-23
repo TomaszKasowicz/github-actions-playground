@@ -1,5 +1,6 @@
 on:
   pull_request:
+    branches: [main]
   
 jobs:
   reusable:
@@ -8,6 +9,6 @@ jobs:
   another:
     needs: reusable
     runs-on: ubuntu-latest
-    stes:
+    steps:
     - run: 'echo "another job after reusable"'
  
