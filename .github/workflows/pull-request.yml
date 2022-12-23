@@ -1,10 +1,12 @@
+name: "Fork Join"
+
 on:
   pull_request:
     branches: [main]
   
 jobs:
   reusable:
-    uses: ./.github/workflows/reausable.yml
+    uses: ./.github/workflows/reausable-jobs.yml
   
   another:
     needs: reusable
