@@ -1,0 +1,23 @@
+on:
+  workflow_call:
+  
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'echo "prepare"'
+  job1:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'echo "job1"'
+  job2:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'echo "job2"'
+  job3:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'echo "job3"'

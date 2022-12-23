@@ -1,0 +1,16 @@
+name: "Fork Join"
+
+on:
+  pull_request:
+    branches: [main]
+  
+jobs:
+  reusable:
+    uses: ./.github/workflows/reusable-jobs.yml
+  
+  another:
+    needs: reusable
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'echo "another job after reusable"'
+ 
