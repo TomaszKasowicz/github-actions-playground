@@ -6,7 +6,7 @@ on:
   
 jobs:
   reusable:
-    uses: ./.github/workflows/reausable-jobs.yml
+    uses: ./.github/workflows/reusable-jobs.yml
   
   another:
     needs: reusable
