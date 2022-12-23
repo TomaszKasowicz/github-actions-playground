@@ -1,0 +1,13 @@
+on:
+  pull_request:
+  
+jobs:
+  reusable:
+    uses: ./.github/workflows/reausable.yml
+  
+  another:
+    needs: reusable
+    runs-on: ubuntu-latest
+    stes:
+    - run: 'echo "another job after reusable"'
+ 
